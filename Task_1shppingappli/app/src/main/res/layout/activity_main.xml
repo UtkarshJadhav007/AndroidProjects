@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="0dp"
+            android:layout_height="320dp"
+            android:src="@drawable/iphone"
+            android:scaleType="fitCenter"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/productTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone 17 Pro Max (256GB, Cosmic Orange)"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/productImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/productPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹133,999"
+            android:textSize="28sp"
+            android:textColor="@color/darkgreen"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/productTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="24dp"/>
+
+        <TextView
+            android:id="@+id/gstLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="incl. GST"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/productPriceText"
+            app:layout_constraintStart_toEndOf="@id/productPriceText" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION :"
+            android:textSize="14sp"
+            android:textColor="#9E9E9E"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="24dp"
+            app:layout_constraintTop_toBottomOf="@id/productPriceText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Powered by the A19 Pro chip featuring a 6-core CPU, 6-core GPU with Neural Accelerators, and 16-core Neural Engine, this Apple iPhone 17 Pro Max 6.9-inch Smartphone delivers fast, efficient performance and smooth multitasking.\n\nHardware-accelerated ray tracing enhances graphics-intensive apps, making gaming and professional workflows seamless."
+            android:textSize="15sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif-light"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/descriptionLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="24dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCartButton"
+            android:layout_width="180dp"
+            android:layout_height="64dp"
+            android:text="Add to Cart"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/Cosmicorange"
+            app:cornerRadius="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
